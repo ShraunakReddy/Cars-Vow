@@ -1,0 +1,100 @@
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <link rel="stylesheet" href="cars.css">
+</head>
+<body>
+      <a href="http://127.0.0.1:5500/d.html" alt="Mythrill" target="_blank">
+            <div class="card">
+              <div class="wrapper">
+                <img src="images/dodge_logo.jpg" class="cover-image" />
+              </div>
+              <img src="images/dodge_name.jpg" class="title" />
+              <img src="images/dodge_symbol.jpg" class="character" onclick="playdodge()"/>
+            </div>
+          </a>
+          <audio id="audio1" src="sounds/dodge.mp3"></audio>
+          <script>
+            function playdodge() {
+              var audio = document.getElementById('audio1');
+              audio.play();
+            }
+          </script>
+          <a href="http://127.0.0.1:5500/B.html" alt="Mythrill" target="_blank">
+            <div class="card">
+              <div class="wrapper">
+                <img src="images/bmw_logo.jpg" class="cover-image" />
+              </div>
+              <img src="images/bmw_name.jpg" class="title" />
+              <img src="images/bmw_symbol.jpg" class="character" onclick="playbmw()"/>
+            </div>
+          </a>
+          <audio id="audio2" src="sounds/bmw.wav"></audio>
+          <script>
+            function playbmw() {
+              var audio = document.getElementById('audio2');
+              audio.play();
+            }
+          </script>
+          
+
+
+          <a href="http://127.0.0.1:5500/j.html" alt="Mythrill" target="_blank">
+            <div class="card">
+              <div class="wrapper">
+                <img src="images/j_logo.jpg" class="cover-image" />
+              </div>
+              <img src="images/j_name.jpg" class="title" />
+              <img src="images/j_symbol.jpg" class="character" onclick="playSound()"/>
+            </div>
+          </a>
+          <audio id="audio3" src="sounds/jaguar.mp3"></audio>
+          <script>
+            function playSound() {
+              var audio = document.getElementById('audio3');
+              audio.play();
+            }
+          </script>
+
+
+
+          <a href="http://127.0.0.1:5500/bugatti.html" alt="Mythrill" target="_blank">
+            <div class="card">
+              <div class="wrapper">
+                <img src="images/b_logo.jpg" class="cover-image" />
+              </div>
+              <img src="images/b_name.jpg" class="title" />
+              <img src="images/b_symbol.jpg" class="character" onclick="playbu()"/>
+            </div>
+          </a>
+          <audio id="audio4" src="sounds/Bugatti.mp3"></audio>
+          <script>
+            function playbu() {
+              var audio = document.getElementById('audio4');
+              audio.play();
+            }
+          </script>
+
+
+
+          <a href="http://127.0.0.1:5500/F.html" alt="Mythrill" target="_blank">
+            <div class="card">
+              <div class="wrapper">
+                <img src="images/f_logo.jpg" class="cover-image" />
+              </div>
+              <img src="images/f_name.jpg" class="title" />
+              <img src="images/f_symbol.jpg" class="character" onclick="playferrari()" />
+            </div>
+          </a>
+          <audio id="audio5" src="sounds/ferrari.mp3"></audio>
+          <script>
+            function playferrari() {
+              var audio = document.getElementById('audio5');
+              audio.play();
+            }
+          </script>
+          
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cars</title>
+    <!-- Link File CSS -->
+    <link rel="stylesheet" href="j.css">
+</head>
+<body>
+    <h1 class="header">Scroll To See Details</h1>
+    <div class="hero"></div>
+    <main>
+        <div class="scrollbar"></div>
+        <div class="container">
+          <img class="img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Jaguar_-_logo_%28MSP16%29.jpg/330px-Jaguar_-_logo_%28MSP16%29.jpg">
+          
+          <p>FOUNDER : 	Jaguar Land Rover</p>
+          <p>Products : Cars</p> 
+            <p>Jaguar Cars was the company that was responsible for the production of Jaguar cars until its operations were fully merged with those of Land Rover to form Jaguar Land Rover on 1 January 2013.Jaguar first appeared in September 1935 as a model name on an SS 2½-litre sports saloon.[13][14] A matching open two seater sports model was named SS Jaguar 100.</p>         
+        </div>
+    </main>
+    <script>
+        let heroBg = document.querySelector('.hero');
+
+        setInterval(() => {
+            heroBg.style.backgroundImage = "url(images/J-Light.jpg)"
+            
+            setTimeout(() => {
+                heroBg.style.backgroundImage = "url(images/J.jpg)"
+            }, 1000);
+        }, 2200);
+    </script>
+</body>
+</html>

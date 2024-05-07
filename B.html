@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cars</title>
+    <!-- Link File CSS -->
+    <link rel="stylesheet" href="B.css">
+</head>
+<body>
+    <h1 class="header">Scroll To See Details</h1>
+    <div class="hero"></div>
+    <main>
+        <div class="scrollbar"></div>
+        <div class="container">
+          <img class="img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/BMW_logo_%28gray%29.svg/330px-BMW_logo_%28gray%29.svg.png">
+          
+          <p>FOUNDER : Karl Rapp</p>
+          <p>Products : Carsmotorcycles</p> 
+            <p>BMW is an abbreviation for Bayerische Motoren Werke. BMW remained in business by producing motorcycle engines and railway brakes.</p>         
+        </div>
+    </main>
+    <script>
+        let heroBg = document.querySelector('.hero');
+
+        setInterval(() => {
+            heroBg.style.backgroundImage = "url(images/B-Light.jpg)"
+            
+            setTimeout(() => {
+                heroBg.style.backgroundImage = "url(images/B.jpg)"
+            }, 1000);
+        }, 2200);
+    </script>
+</body>
+</html>

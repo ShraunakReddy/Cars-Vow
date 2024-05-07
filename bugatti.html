@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cars</title>
+    <!-- Link File CSS -->
+    <link rel="stylesheet" href="bugatti.css">
+</head>
+<body>
+    <h1 class="header">Scroll To See Details</h1>
+    <div class="hero"></div>
+    <main>
+        <div class="scrollbar"></div>
+        <div class="container">
+          <img class="img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Bugatti_logo.svg/330px-Bugatti_logo.svg.png">
+          
+          <p>FOUNDER : Ettore Bugatti</p>
+          <p>Products : Automobiles</p> 
+            <p>Automobiles Ettore Bugatti was a German then French manufacturer of high-performance automobiles. The company was founded in 1909 in the then-German city of Molsheim,  by the Italian-born industrial designer Ettore Bugatti. The cars were known for their design beauty and numerous race victories. Famous Bugatti automobiles include the Type 35 Grand Prix cars, the Type 41 "Royale", the Type 57 "Atlantic" and the Type 55 sports car.</p>         
+        </div>
+    </main>
+    <script>
+        let heroBg = document.querySelector('.hero');
+
+        setInterval(() => {
+            heroBg.style.backgroundImage = "url(images/BU-Light.jpg)"
+            
+            setTimeout(() => {
+                heroBg.style.backgroundImage = "url(images/BU.jpg)"
+            }, 1000);
+        }, 2000);
+    </script>
+</body>
+</html>

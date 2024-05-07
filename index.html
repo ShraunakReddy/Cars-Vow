@@ -1,0 +1,598 @@
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <style>
+            @import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --dark-color: #1f1919;
+  --mid-dark: #fae101;
+  --light-color: #ecc8c8;
+  --mid-light: #999393;
+  --shadow: rgba(0, 0, 0, 0.333);
+  --linear-rainbow: linear-gradient(
+    to right,#edbfbf,#ec4747,#cb3131,#61795d,#889a4e
+  );
+  --noise-texture: url(https://i.gyazo.com/a26366e538851a5c569ff648e99b7fd4.png);
+  --gif-texture: url(https://media1.giphy.com/media/3oGRFrD8HqAUe5CXIc/source.gif);
+}
+
+html,
+
+
+body {
+  display: grid;
+  place-items: center;
+  background: var(--dark-color);
+  background-image: var(--noise-texture);
+  background-blend-mode: overlay;
+}
+
+h1 {
+  margin: 0;
+  font-family: "Mulish", sans-serif;
+  font-weight: 1000;
+  font-size: 64px;
+  color: var(--light-color);
+}
+
+h2 {
+  margin: 0;
+  font-family: "Playfair Display", serif;
+  font-size: 16px;
+  color: var(--mid-light);
+}
+
+h3 {
+  margin: 0;
+  font-family: "DM Serif Display", serif;
+  font-size: 24px;
+  color: var(--mid-light);
+}
+
+p {
+  font-family: "Mulish", sans-serif;
+  font-weight: 700;
+  width: 390px;
+  color: var(--mid-light);
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  box-sizing: border-box;
+  margin: 30px 128px;
+  gap: 48px;
+  font-size: 16px;
+}
+
+a {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+  font-family: "Mulish", sans-serif;
+  color: var(--mid-light);
+  font-weight: 400;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+
+a:not(.buy, .buy-cta, .learn) {
+  width: 64px;
+}
+
+a:hover:not(.buy, .buy-cta, .learn) {
+  transition: all 0.2s ease-in-out;
+  font-weight: 900;
+  text-shadow: 0 0 8px var(--light-color);
+}
+
+.scotch-container {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  height: 580px;
+  width: 960px;
+  background-image: linear-gradient(
+    150deg,
+    var(--dark-color) 60.2%,
+    var(--mid-dark) 60.28%,
+    var(--mid-dark) 60.7%,
+    var(--dark-color) 60.78%,
+    var(--dark-color) 61.4%,
+    var(--mid-dark) 61.48%,
+    var(--mid-dark) 62.6%,
+    var(--dark-color) 62.68%,
+    var(--dark-color) 63.4%,
+    var(--mid-dark) 63.48%,
+    var(--mid-dark) 64.6%,
+    var(--dark-color) 64.68%,
+    var(--dark-color) 65.4%,
+    var(--mid-dark) 65.48%,
+    var(--mid-dark) 67.4%,
+    var(--dark-color) 67.48%,
+    var(--dark-color) 68.4%,
+    var(--mid-dark) 68.48%,
+    var(--mid-dark) 71.4%,
+    var(--dark-color) 71.48%,
+    var(--dark-color) 72.4%,
+    var(--mid-dark) 72.48%,
+    var(--mid-dark) 76.4%,
+    var(--dark-color) 76.48%,
+    var(--dark-color) 77.4%,
+    var(--mid-dark) 77.48%,
+    var(--mid-dark) 81.4%,
+    var(--dark-color) 81.48%,
+    var(--dark-color) 82.4%,
+    var(--mid-dark) 82.48%,
+    var(--mid-dark) 87.4%,
+    var(--dark-color) 87.48%
+  );
+  box-sizing: border-box;
+  animation: spawn 2s ease-in-out forwards; 
+}
+
+.scotch-container:before {
+  content: "";
+  display: flex;
+  position: absolute;
+  background-image: var(--noise-texture);
+  height: 580px;
+  width: 960px;
+  mix-blend-mode: overlay;
+  pointer-events: none;
+  z-index: 3;
+}
+
+.scotch-container:hover:after {
+  content: "";
+  display: flex;
+  position: absolute;
+  background-image: var(--gif-texture);
+  height: 580px;
+  width: 960px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  mix-blend-mode: screen;
+  pointer-events: none;
+  opacity: 64%;
+  z-index: 3;
+}
+
+.main-container {
+  padding: 0;
+  margin: auto;
+  display: grid;
+  height: 460px;
+  gap: 64px;
+  place-items: center;
+  box-sizing: border-box;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.text-sphere-container {
+  display: flex;
+  width: 125%;
+  gap: 128px;
+  align-items: center;
+}
+
+.sphere {
+  display: grid;
+  height: 200px;
+  width: 200px;
+  background-size: cover;
+  background-image: url('https://i.pinimg.com/564x/46/8f/ff/468fff383e2a528d4a98413a9a9642df.jpg');
+  border: 3px solid var(--dark-color);
+  border-radius: 30%;
+  transition: all 0.4s;
+  box-shadow: 0px 0px var(--shadow);
+}
+
+.sphere:hover {
+  scale: 1.1;
+  box-shadow: 16px 16px var(--shadow);
+  transition: all 0.2s;
+}
+
+.buy {
+  display: grid;
+  place-items: center;
+  font-weight: 900;
+  border: 1px solid var(--mid-light);
+  height: 40px;
+  width: 128px;
+  transition: all 0.2s;
+}
+
+.buy:hover {
+  scale: 1.1;
+  background: var(--light-color);
+  color: var(--dark-color);
+  border: 1px solid var(--light-color);
+}
+
+.buy-cta {
+  display: grid;
+  place-items: center;
+  color: var(--dark-color);
+  font-weight: 900;
+  background-image: linear-gradient(
+    to right,
+    var(--light-color),
+    var(--light-color)
+  );
+  height: 40px;
+  width: 200px;
+  font-size: 16px;
+  transition: all 0.4s;
+}
+
+.buy-cta:hover {
+  scale: 1.1;
+  color: var(--light-color);
+  background-image: var(--linear-rainbow);
+  transition: all 0.2s;
+}
+
+.learn-arrow {
+  margin: -40px 0;
+  text-align: center;
+  transition: all 0.2s;
+}
+
+.learn:hover {
+  scale: 1.2;
+  font-weight: 900;
+}
+
+.learn {
+  display: grid;
+  color: var(--light-color);
+  font-family: "Mulish", sans-serif;
+  font-weight: 400;
+  cursor: pointer;
+  font-size: 12px;
+  transition: all 0.2s;
+}
+
+.arrow {
+  margin: -6px;
+  padding: 0;
+  font-size: 32px;
+  color: var(--light-color);
+}
+
+@keyframes spawn{
+  0%{
+    box-shadow: 0 0 0 var(--shadow);
+    opacity:0%;
+  }
+  100%{
+    box-shadow: 0 0 32px var(--shadow);
+    opacity:100%;
+  }
+}
+*{
+            margin: auto;
+            padding: auto;
+            box-sizing: border-box;
+        }
+        .box{
+            width: 350px;
+            height: 350px;
+            position: relative;
+            margin-top: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: nowrap;
+        }
+        .box #accelerator{
+            width: 40px;
+            height: 60px;
+            position: absolute;
+            right: 0;
+            bottom: 15px;
+            outline: none;
+            user-select: none;
+            cursor: pointer;
+            border-radius: 10px;
+            background: linear-gradient(to top, #4d4d4d, #b2b2af);
+            box-shadow: 0px 7px 10px 0px gray;
+            transition: 0.5s;
+        }
+        .box #accelerator:active{
+            transform-origin: bottom;
+            transform: rotateX(30deg);
+            box-shadow: 0px 3px 5px 0px gray
+        }
+        
+        .box #brake{
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            right: 50px;
+            bottom: 15px;
+            outline: none;
+            user-select: none;
+            cursor: pointer;
+            border-radius: 10px;
+            background: linear-gradient(to top, #4d4d4d, #b2b2af);
+            box-shadow: 0px 7px 10px 0px gray;
+            transition: 0.2s;
+        }
+        .box #brake:active{
+            transform-origin: bottom;
+            transform: rotateX(30deg);
+            box-shadow: 0px 3px 5px 0px gray
+        }
+        #speedometer{
+            width: 250px;
+            height: 250px;
+            border: 2px solid gray;
+            border-radius: 50%;
+            box-shadow: 0px 0px 10px 5px gray;
+            background-image: url("speedometer.png");
+            background-size: 100%, 100%;
+            background-repeat: no-repeat;
+            position: relative;
+        }
+        #speedometer #needle{
+            width: 3px;
+            height: 60px;
+            border: 1px solid white;
+            border-radius: 5px;
+            background-color: #89ff00;
+            position: absolute;
+            top: 25%;
+            left: 49%;
+            z-index: 111;
+            transform-origin: bottom;
+            transform: rotate(-134deg);
+            transition: 2s;
+        }
+        #point{
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            border: 1px solid white;
+            border-radius: 50%;
+            bottom: -10px;
+            left: -9px;
+            background-color: #89ff00;
+            transition: 2s;
+        }
+        #logo{
+            align-items: center;
+            position: absolute;
+            border: 10px solid gray;
+            bottom: 65px;
+            left: 95px;
+            padding: 2px 5px 2px 5px;
+            border-radius: 5px;
+            font-family: Arial Black;
+            color: rgb(0, 0, 0);
+            background-color: #ff0000;
+            box-shadow: inset 0px 0px 4px 0px #83ff00;
+            z-index: 1;
+            animation: 0s vibrate linear infinite;
+        }
+        @keyframes vibrate{
+            from{
+                left: 97px;
+            }
+            to{
+                left: 95px;
+            }
+        }
+        .learn{
+            background-color:red;
+            border-radius:20px;
+        }
+        @import url('https://fonts.googleapis.com/css?family=Poppins:900i');
+
+body {
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.cta {
+    display: flex;
+    padding: 10px 45px;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 40px;
+    color: white;
+    background: #6225E6;
+    transition: 1s;
+    box-shadow: 6px 6px 0 black;
+    transform: skewX(-15deg);
+}
+
+.cta:focus {
+   outline: none; 
+}
+
+.cta:hover {
+    transition: 0.5s;
+    box-shadow: 10px 10px 0 #FBC638;
+}
+
+.cta span:nth-child(2) {
+    transition: 0.5s;
+    margin-right: 0px;
+}
+
+.cta:hover  span:nth-child(2) {
+    transition: 0.5s;
+    margin-right: 45px;
+}
+
+  span {
+    transform: skewX(15deg) 
+  }
+
+  span:nth-child(2) {
+    width: 20px;
+    margin-left: 30px;
+    position: relative;
+    top: 12%;
+  }
+
+path.one {
+    transition: 0.4s;
+    transform: translateX(-60%);
+}
+
+path.two {
+    transition: 0.5s;
+    transform: translateX(-30%);
+}
+
+.cta:hover path.three {
+    animation: color_anim 1s infinite 0.2s;
+}
+
+.cta:hover path.one {
+    transform: translateX(0%);
+    animation: color_anim 1s infinite 0.6s;
+}
+
+.cta:hover path.two {
+    transform: translateX(0%);
+    animation: color_anim 1s infinite 0.4s;
+}
+
+@keyframes color_anim {
+    0% {
+        fill: white;
+    }
+    50% {
+        fill: #FBC638;
+    }
+    100% {
+        fill: white;
+    }
+}
+      </style>
+</head>
+<body>
+      <br>
+      <div class="scotch-container">
+            <div class="main-container">
+              <div class="text-sphere-container">
+                <div class="text-container">
+                  <h1>VOW</h1>
+                  <h2>Car Interactive Website</h2>
+                </div>
+                <a href="#">
+                  <div class="sphere"></div>
+                </a>
+              </div>
+              <div class="learn-arrow">
+              </div>
+            </div>
+          </div>
+          <h1>Experience the [SPEED]</h1>
+    <div class="box">
+      <audio id="caraccelerator" loop>
+      <source src="car-raise.mp3" type="audio/mpeg">
+      </audio>
+      
+      <audio id="carsound" loop>
+      <source src="car-sound.mp3" type="audio/mpeg">
+      </audio>
+      
+      <audio id="carbrake">
+      <source src="braking.mp3" type="audio/mpeg">
+      </audio>
+      
+      <button id="accelerator" onmousedown="carAccelerator()" onmouseup="LeaveCarAccelerator()">|||</button>
+      
+      <button id="brake" onmousedown="carBrake()" onmouseup="LeaveCarBrake()">|||</button>
+      
+      <div id="speedometer">
+      <div id="needle">
+          <div id="point"></div>
+          </div>
+          <div id="logo">☠️</div>
+      </div>
+      
+      </div>
+      <script>
+      var caraccelerator = document.getElementById("caraccelerator");
+          
+      var carsound = document.getElementById("carsound"); 
+          
+      var carbrake = document.getElementById("carbrake");
+          
+      function carAccelerator(){
+      document.getElementById("needle").style.cssText = "transform-origin: bottom; transform: rotate(134deg); background-color:red;";
+          
+      document.getElementById("point").style.cssText = "background-color:red;";
+          
+      document.getElementById("logo").style.cssText = "animation: 0.1s vibrate linear infinite;";
+          
+      caraccelerator.play();
+      }
+      
+          
+     function LeaveCarAccelerator(){
+      document.getElementById("needle").style.cssText = "transform-origin: bottom; transform: rotate(-134deg); background-color:#89ff00; transition:3s;";
+          
+      document.getElementById("point").style.cssText = " background-color:#89ff00; transition:3s;";
+
+      document.getElementById("logo").style.cssText = "animation: 0s vibrate linear infinite;";
+
+      caraccelerator.pause();
+      caraccelerator.currentTime = 8;
+      carsound.play();
+      }
+
+      function carBrake(){
+      document.getElementById("needle").style.cssText = "transform-origin: bottom; transform: rotate(-135deg); background-color:#89ff00; transition:0.5s;";
+
+      document.getElementById("point").style.cssText = " background-color:#89ff00; transition:0.5s;";
+
+      carbrake.play();
+      carsound.pause();
+      }
+
+      function LeaveCarBrake(){
+      carbrake.pause();
+      carbrake.currentTime = 0;
+      caraccelerator.currentTime =0;
+      }
+      </script><br><br><br><br>
+<div class="wrapper">
+  <a class="cta" href="http://127.0.0.1:5500/cars.html">
+    <span>EXPLORE</span>
+    <span>
+      <svg width="66px" height="43px" viewBox="0 0 66 43" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <g id="arrow" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+          <path class="one" d="M40.1543933,3.89485454 L43.9763149,0.139296592 C44.1708311,-0.0518420739 44.4826329,-0.0518571125 44.6771675,0.139262789 L65.6916134,20.7848311 C66.0855801,21.1718824 66.0911863,21.8050225 65.704135,22.1989893 C65.7000188,22.2031791 65.6958657,22.2073326 65.6916762,22.2114492 L44.677098,42.8607841 C44.4825957,43.0519059 44.1708242,43.0519358 43.9762853,42.8608513 L40.1545186,39.1069479 C39.9575152,38.9134427 39.9546793,38.5968729 40.1481845,38.3998695 C40.1502893,38.3977268 40.1524132,38.395603 40.1545562,38.3934985 L56.9937789,21.8567812 C57.1908028,21.6632968 57.193672,21.3467273 57.0001876,21.1497035 C56.9980647,21.1475418 56.9959223,21.1453995 56.9937605,21.1432767 L40.1545208,4.60825197 C39.9574869,4.41477773 39.9546013,4.09820839 40.1480756,3.90117456 C40.1501626,3.89904911 40.1522686,3.89694235 40.1543933,3.89485454 Z" fill="#FFFFFF"></path>
+          <path class="two" d="M20.1543933,3.89485454 L23.9763149,0.139296592 C24.1708311,-0.0518420739 24.4826329,-0.0518571125 24.6771675,0.139262789 L45.6916134,20.7848311 C46.0855801,21.1718824 46.0911863,21.8050225 45.704135,22.1989893 C45.7000188,22.2031791 45.6958657,22.2073326 45.6916762,22.2114492 L24.677098,42.8607841 C24.4825957,43.0519059 24.1708242,43.0519358 23.9762853,42.8608513 L20.1545186,39.1069479 C19.9575152,38.9134427 19.9546793,38.5968729 20.1481845,38.3998695 C20.1502893,38.3977268 20.1524132,38.395603 20.1545562,38.3934985 L36.9937789,21.8567812 C37.1908028,21.6632968 37.193672,21.3467273 37.0001876,21.1497035 C36.9980647,21.1475418 36.9959223,21.1453995 36.9937605,21.1432767 L20.1545208,4.60825197 C19.9574869,4.41477773 19.9546013,4.09820839 20.1480756,3.90117456 C20.1501626,3.89904911 20.1522686,3.89694235 20.1543933,3.89485454 Z" fill="#FFFFFF"></path>
+          <path class="three" d="M0.154393339,3.89485454 L3.97631488,0.139296592 C4.17083111,-0.0518420739 4.48263286,-0.0518571125 4.67716753,0.139262789 L25.6916134,20.7848311 C26.0855801,21.1718824 26.0911863,21.8050225 25.704135,22.1989893 C25.7000188,22.2031791 25.6958657,22.2073326 25.6916762,22.2114492 L4.67709797,42.8607841 C4.48259567,43.0519059 4.17082418,43.0519358 3.97628526,42.8608513 L0.154518591,39.1069479 C-0.0424848215,38.9134427 -0.0453206733,38.5968729 0.148184538,38.3998695 C0.150289256,38.3977268 0.152413239,38.395603 0.154556228,38.3934985 L16.9937789,21.8567812 C17.1908028,21.6632968 17.193672,21.3467273 17.0001876,21.1497035 C16.9980647,21.1475418 16.9959223,21.1453995 16.9937605,21.1432767 L0.15452076,4.60825197 C-0.0425130651,4.41477773 -0.0453986756,4.09820839 0.148075568,3.90117456 C0.150162624,3.89904911 0.152268631,3.89694235 0.154393339,3.89485454 Z" fill="#FFFFFF"></path>
+        </g>
+      </svg>
+    </span> 
+  </a>
+</div>
+<br><h3>View cars</h3>
+</body>
+</html>
